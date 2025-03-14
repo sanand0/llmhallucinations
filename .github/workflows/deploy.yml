@@ -1,4 +1,4 @@
-name: Build & Deploy Marp Presentation
+name: Generate HTML from README
 
 on:
   push:
@@ -8,32 +8,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      # Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # Setup Node.js for running Marp CLI
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: '22'
 
-      # Build: Convert README.md to index.html using Marp CLI
-      - name: Convert README.md to index.html
+      - name: Generate HTML with Marp
         run: npx @marp-team/marp-cli@latest README.md -o index.html
 
-      # Upload the built file as an artifact for GitHub Pages deployment
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: index.html
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          keep_files: false

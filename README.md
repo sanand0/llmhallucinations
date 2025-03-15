@@ -1,5 +1,8 @@
 ---
 marp: true
+title: Visualizing LLM Hallucinations
+author: Anand S
+url: https://sanand0.github.io/llmhallucinations/
 theme: gaia
 class: gaia
 paginate: true

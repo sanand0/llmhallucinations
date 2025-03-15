@@ -19,7 +19,7 @@ Slides: [sanand0.github.io/llmhallucinations](https://sanand0.github.io/llmhallu
 
 ---
 
-![bg right cover](https://upload.wikimedia.org/wikipedia/commons/9/95/Robo_psychologist.jpg)
+![bg right cover](img/robo-psychologist.webp)
 
 # I'm often asked: What's an LLM psychologist?
 
@@ -131,7 +131,7 @@ But errors add up in Agents, Computer use.
 
 > Concisely list 5 inventions created by human error or hallucinations
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visualizing_LLM_logprobs.webp/800px-Visualizing_LLM_logprobs.webp.png?20250314022148)
+![](img/logprobs-visualization.webp)
 
 [llmviz.straive.app](https://llmviz.straive.app) 🔗 [Prompt](https://llmfoundry.straive.com/playground#?template=Hallucinations) 🔗 [![](https://github.githubassets.com/favicons/favicon.svg)](https://github.com/sanand0/llmviz)
 
@@ -151,7 +151,7 @@ But errors add up in Agents, Computer use.
 
 # Embeddings highlight hallucinations
 
-![bg right:30% contain](https://upload.wikimedia.org/wikipedia/commons/3/37/Embedding_Similarity_Network.gif)
+![bg right:30% contain](img/embedding-network.gif)
 
 Examples:
 
@@ -161,7 +161,7 @@ Examples:
 
 ---
 
-![bg right](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Visualization_of_contract_clause_evaluations.gif/600px-Visualization_of_contract_clause_evaluations.gif)
+![bg right](img/contract-analysis.gif)
 
 # LLM as a judge
 
